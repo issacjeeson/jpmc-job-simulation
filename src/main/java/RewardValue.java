@@ -24,7 +24,12 @@
         public double getMilesValue() {
             return milesValue;
         }
+        public void convertFromCashToMiles(double cashToMilesRate) {
+            this.milesValue = (int) (this.cashValue * cashToMilesRate);}
     
+            public void convertFromMilesToCash(double milesToCashRate) {
+                this.cashValue = this.milesValue * milesToCashRate;
+            }
         public static void main(String[] args) {
             // Example usage:
             // Creating RewardValue object using cash value
